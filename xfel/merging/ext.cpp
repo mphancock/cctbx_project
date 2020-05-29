@@ -15,9 +15,6 @@
 typedef cctbx::miller::index<> miller_index_t;
 
 namespace sx_merging {
-  void foo2(){
-    std::cout <<"HELLO merging foo2"<< std::endl;
-  }
 
   void get_hkl_chunks_cpp(dials::af::reflection_table reflections,
                           const scitbx::af::shared<miller_index_t>& hkl_list,
@@ -220,7 +217,6 @@ namespace boost_python { namespace {
   sx_merging_init_module() {
     using namespace boost::python;
 
-    def("foo2",&sx_merging::foo2);
     def("get_hkl_chunks_cpp",&sx_merging::get_hkl_chunks_cpp);
     def("isigi_dict_to_reflection_table",&sx_merging::isigi_dict_to_reflection_table);
     def("split_reflections_by_experiment_chunks_cpp",&sx_merging::split_reflections_by_experiment_chunks_cpp);
